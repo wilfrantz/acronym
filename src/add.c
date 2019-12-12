@@ -12,11 +12,11 @@
  * This function add an acronym to the database,
  * it receives the string with the acronym and 
  * the path to the database.
- * It returns 0 for success and a non-zero for failure!
- *
- * */
+ * It returns 0 for success and a non-zero for failure! */
+
 int add (char* arg, char* path){
 
+    // path to the acronym file.
     char* file = strcat(path, arg);
 
     // check if the acronym file exist.
@@ -24,6 +24,8 @@ int add (char* arg, char* path){
 	char ch;
 	char upper_arg[SIZE];
 	int i = 0;
+
+	// turn accronym to upper case letters.
 	while (arg[i]) { 
 	    ch = arg[i]; 
 	    upper_arg[i] = toupper(ch); 
@@ -39,10 +41,11 @@ int add (char* arg, char* path){
 	FILE* fp = fopen (file, "w");
 
 	char cmd [SIZE];
+	// Get program script to perform the task.
 	strcpy(cmd, "../shelDir/add.sh ");
 	strcat (cmd, arg);
 
-	// invoke the system command.
+	// execute the system command.
 	system(cmd);
 
 	//close file
