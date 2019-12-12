@@ -6,28 +6,48 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include <unistd.h>
 
-int del (char* arg) {
+/* This function delete an acronym from the acronym database.
+ * It receives the acronym to delete and the path to the acronym
+ * database from the routine.
+ * It checks if the acronym file exist within the database
+ * print an error message if or delete the file.*/
+
+int del (char* arg, char* filePath) {
+
+	// get the right path to the file. 
+	strcat(filePath, arg);
+	// variable to hold the system command.
 	char cmd[SIZE];
-	char path[SIZE];
-
-	char ch;
 	char upper_arg[SIZE];
-	int i = 0;
 
-	strcpy(path, "../.datfiles/");
-	strcat(path, arg);
-	strcpy(cmd, "rm ");
+	// check if the acronym file exist.
+	// before we try to delete.
+	if (access(filePath, F_OK)!= -1){
 
-	strcat(cmd, path);
-	system (cmd);
+		char ch;
+		int i = 0;
+		// get the system command.
+		strcpy(cmd, "rm ");
+		// get the path to the file to delete.
+		strcat(cmd, filePath);
+		// execute de command.
+		system (cmd);
 
-	// turn accronym to upper case letters.
-	while (arg[i]) { 
-		ch = arg[i]; 
-		upper_arg[i] = toupper(ch); 
-		i++; 
+		// turn accronym to upper case letters.
+		while (arg[i]) { 
+			ch = arg[i]; 
+			upper_arg[i] = toupper(ch); 
+			i++; 
+		}
+
+		printf("\nAccronym %s deleted from you database directoty.\n", upper_arg);
+	}else{
+		// print error message if the file
+		// does not exist in the file path.
+		printf("\nThe acronym %s does not exist in the database\n", upper_arg);
+		exit(1); // exit with error.
 	}
-	printf("\nAccronym %s deleted from you database directoty.\n", upper_arg);
 	return 0;
 }

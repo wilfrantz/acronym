@@ -84,7 +84,7 @@ int main (int argc, char** argv)
 					  break;
 			case 'a': add(acronym, filePath);
 					  break;
-			case 'r': del(acronym);
+			case 'r': del(acronym, filePath);
 					  break;
 					  /*
 						 case 's': search(acronym);

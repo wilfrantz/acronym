@@ -8,6 +8,13 @@
 #include <ctype.h>
 #include <unistd.h>
 
+/*
+ * This function add an acronym to the database,
+ * it receives the string with the acronym and 
+ * the path to the database.
+ * It returns 0 for success and a non-zero for failure!
+ *
+ * */
 int add (char* arg, char* path){
 
     char* file = strcat(path, arg);
