@@ -86,12 +86,8 @@ int main (int argc, char** argv)
 					  break;
 			case 'r': del(acronym, filePath);
 					  break;
-					  /*
-						 case 's': search(acronym);
-						 break;
-						 case 'h': help(acronym);
-						 break;
-						 */
+			case 'e': edit (acronym, filePath);
+					  break;
 			default: printf("\nBad option...\nShould be \"-a\", \"-r\", \"s\" or  \"-h\"\n");
 					 exit(3);
 					 break;

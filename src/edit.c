@@ -43,6 +43,7 @@ int edit (char* acronym, char* acroPath){
 	}else{ // if program does not have write permission.
 
 		// print error to stdout.
+		printf("\nThe file %s does not have write permission or does not esist in the database\n.", upper_arg);
 	}
 
 	return (0);
