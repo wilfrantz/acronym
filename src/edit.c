@@ -17,33 +17,36 @@
 
 int edit (char* acronym, char* acroPath){
 
+	char ch;
 	char cmd[SIZE];
-	char upper_arg[SIZE];
+	// string variable to hold upper case acronym.
+	char upper_arg[SIZE]; 
+
+
+	strcpy(cmd,"$EDITOR ");
+	// add the file path to the system command.
+	strcat(acroPath, acronym);
+	strcat(cmd, acroPath);
 
 	// check if the file exists and if the program
 	// has write permission.
-	if (access(acronym, W_OK) != -1){
-		// get the command line variable.
-		strcpy(cmd,"$EDITOR ");
-		// add the file path to the system command.
-		strcat(cmd, acroPath);
+	// add the system command to the cmd variable.
+	if (access(acroPath, F_OK) == 0){
 
-		// execute the sustem command.
+		// execute the system command.
 		system(cmd);
-
-
-		// turn accronym to upper case letters.
-		int i = 0;
-		while (acronym) { 
-			char ch = acronym[i]; 
-			upper_arg[i] = toupper(ch); 
-			i++; 
-		}
 
 	}else{ // if program does not have write permission.
 
+		// turn accronym to upper case letters.
+		int i = 0;
+		while (acronym[i]) { 
+			ch = acronym[i]; 
+			upper_arg[i] = toupper(ch); 
+			i++; 
+		}
 		// print error to stdout.
-		printf("\nThe file %s does not have write permission or does not esist in the database\n.", upper_arg);
+		printf("\nThe file %s does not esist in the database.\n", upper_arg);
 	}
 
 	return (0);

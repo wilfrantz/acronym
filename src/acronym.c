@@ -29,7 +29,7 @@ int main (int argc, char** argv)
 	/*
 	   current command line arguments
 	   ---------------------------------------
-	   -a add			Add a a new acronym.
+	   -a add			Add  a new acronym.
 	   -e edit			Edit a acronym
 	   -r remove		remove an acronym
 
@@ -49,10 +49,22 @@ int main (int argc, char** argv)
 		exit(0); // exit program with success.
 
 	}else if (argc == 2){
+		char ch;
+		char upper_acro[SIZE];
+		char acronym[SIZE];
+		int i = 0;
+		strcpy(acronym, argv[1]);
+
+		// Turn acronym to uppercase letters.
+		while (acronym[i]){
+			ch = acronym[i];
+			upper_acro[i] = toupper(ch);
+			i++;
+		}
 		strcat(filePath, argv[1]);
 		// check is the file acronym file exist.
 		if (access(filePath, F_OK) != 0){
-			printf("\nThe acronym %s is not in your database.\n", argv[1]);
+			printf("\nThe acronym %s is not in your database.\n", upper_acro);
 			exit(1);
 		}
 		/* find  and display the acronym file from the

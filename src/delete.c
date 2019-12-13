@@ -22,6 +22,7 @@ int del (char* arg, char* filePath) {
 	// variable to hold the system command.
 	char cmd[SIZE];
 	char upper_arg[SIZE];
+	char ch;
 
 	// check if the acronym file exist.
 	// before we try to delete.
@@ -37,12 +38,19 @@ int del (char* arg, char* filePath) {
 		// turn accronym to upper case letters.
 		int i = 0;
 		while (arg[i]) { 
-			char ch = arg[i]; 
+			ch = arg[i]; 
 			upper_arg[i] = toupper(ch); 
 			i++; 
 		}
 		printf("\nAccronym %s deleted from the database.\n", upper_arg);
 	}else{ // if file does not exist.
+		// turn accronym to upper case letters.
+		int i = 0;
+		while (arg[i]) { 
+			ch = arg[i]; 
+			upper_arg[i] = toupper(ch); 
+			i++; 
+		}
 		// print error message if the file
 		// does not exist in the file path.
 		printf("\nThe acronym %s does not exist in the database\n", upper_arg);
