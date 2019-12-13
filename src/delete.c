@@ -26,8 +26,7 @@ int del (char* arg, char* filePath) {
 	// check if the acronym file exist.
 	// before we try to delete.
 	if (access(filePath, F_OK)!= -1){ // if file exists.
-		char ch;
-		int i = 0;
+
 		// get the system command.
 		strcpy(cmd, "rm ");
 		// get the path to the file to delete.
@@ -36,8 +35,9 @@ int del (char* arg, char* filePath) {
 		system (cmd);
 
 		// turn accronym to upper case letters.
+		int i = 0;
 		while (arg[i]) { 
-			ch = arg[i]; 
+			char ch = arg[i]; 
 			upper_arg[i] = toupper(ch); 
 			i++; 
 		}
