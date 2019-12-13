@@ -33,7 +33,8 @@ int add (char* arg, char* path){
 	}
 	// send error message to stdout.
 	printf("\nThe acronym %s exist in the database.", upper_arg);
-	printf("\nRun program with %s argument\n", upper_arg);
+	printf("\nRun the program with %s as argument\n", upper_arg);
+	printf("\nUsage: whts %s", upper_arg);
 	exit(3);
     }else{
 
