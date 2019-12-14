@@ -1,13 +1,13 @@
 
 
-#include "../header/functions.h"
-#include "../header/utilities.h"
-
 #include <stdio.h> 
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 #include <unistd.h>
+
+#include "../header/functions.h"
+#include "../header/utilities.h"
 
 /*
  * This function add an acronym to the database,
@@ -20,13 +20,16 @@ int add (char* arg, char* path){
     // path to the acronym file.
     char* file = strcat(path, arg);
 
+    // local variable
     char ch;
     char upper_arg[SIZE];
     int i = 0;
 
     // check if the acronym file exist.
-    if (access(file, F_OK) != -1){
+    if (access(file, F_OK) != -1){ // file exists.
+
 	// turn accronym to upper case letters.
+	// set as a convention.
 	while (arg[i]) { 
 	    ch = arg[i]; 
 	    upper_arg[i] = toupper(ch); 
@@ -35,11 +38,12 @@ int add (char* arg, char* path){
 	// send error message to stdout.
 	printf("\nThe acronym %s exist in the database.", upper_arg);
 	printf("\nRun the program with %s as argument\n", upper_arg);
-	printf("\nUsage: whts %s", upper_arg);
+	printf("\nUsage: whts %s\n", upper_arg);
 	exit(3);
-    }else{
+    }else{ // file does not exists
 
 	// turn accronym to upper case letters.
+	// set as a convention.
 	while (arg[i]) { 
 	    ch = arg[i]; 
 	    upper_arg[i] = toupper(ch); 
@@ -47,13 +51,16 @@ int add (char* arg, char* path){
 	}
 	// file pointer variable 
 	FILE* fp = fopen (file, "w");
-	char str[512];
+	char str[256];
 
+	// User prompt for acronym definition.
+	// stores the information in the array string.
 	printf("\nInsert acronym related info:\n");
 	fgets(str, sizeof(str), stdin);
 
-	// write to file.
-	fprintf(fp, "\t%s :\n \t\t%s", upper_arg, str);
+	// write acronym and definition to file in the .datfiles
+	// directory.
+	fprintf(fp, "\n\n\t%s :\n \t\t%s\n\n\n", upper_arg, str);
 
 	//close file
 	fclose(fp);
