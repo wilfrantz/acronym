@@ -8,22 +8,21 @@
  * topics.
  */
 
-#include "../header/functions.h"
-#include "../header/utilities.h"
-
 #include <stdio.h> 
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <ctype.h>
 
-int main (int argc, char** argv)
-{
+#include "../header/functions.h"
+#include "../header/utilities.h"
+
+
+int main (int argc, char** argv){
 	// local variable declaration.
 	char filePath[SIZE];
 	char cmd[SIZE];
 
-	strcpy(cmd, "../shelDir/whts.sh ");
 	strcpy(filePath, "../.datfiles/");
 
 	/*
@@ -32,15 +31,16 @@ int main (int argc, char** argv)
 	   -a add			Add  a new acronym.
 	   -e edit			Edit a acronym
 	   -r remove		remove an acronym
-
-*/
+	   */
 
 	// process condition.
 	if (argc > 3){
 		printf("\nBad Usage.\n");
-		printf("\nUsage: %s -a [acronym], -s [acronym] or -r [acronym] or -h [acronym] ]\n",argv[0]);
+		printf("\nUsage: %s -a [acronym], -s [acronym] or -r [acronym] \n or simply type %s for program documentation]\n",argv[0], argv[0]);
 		exit(1);
 	}
+
+	// process condition and control.
 	else if(argc == 1){
 		// #TODO
 		// if the program is executed without
@@ -49,6 +49,7 @@ int main (int argc, char** argv)
 		exit(0); // exit program with success.
 
 	}else if (argc == 2){
+
 		char ch;
 		char upper_acro[SIZE];
 		char acronym[SIZE];
@@ -62,6 +63,7 @@ int main (int argc, char** argv)
 			i++;
 		}
 		strcat(filePath, argv[1]);
+
 		// check is the file acronym file exist.
 		if (access(filePath, F_OK) != 0){
 			printf("\nThe acronym %s is not in your database.\n", upper_acro);
@@ -69,18 +71,17 @@ int main (int argc, char** argv)
 		}
 		/* find  and display the acronym file from the
 		 * program database (.datfiles direcoty) */
+		strcpy(cmd, "less ");
 		strcat(cmd, filePath);
 		system(cmd);
 
 		exit(0);
 	}
 
-
 	// variable to store the acronym.
 	// if the program is run with parsing.
 	char acronym[SIZE];
 	strcpy(acronym, argv[2]);
-
 
 	for (int i = 1; i < argc; i+=2) {
 		/* check for valid flags (first char should be '-' for flags) */
