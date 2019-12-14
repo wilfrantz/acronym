@@ -1,12 +1,13 @@
 
-#include "../header/utilities.h"
-#include "../header/functions.h"
-
 #include <stdio.h> 
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
 #include <unistd.h>
+
+#include "../header/utilities.h"
+#include "../header/functions.h"
+
 
 /* This function delete an acronym from the acronym database.
  * It receives the acronym to delete and the path to the acronym
@@ -17,10 +18,11 @@
 
 int del (char* arg, char* filePath) {
 
-	// get the right path to the file. 
+	// path to the acronym file. 
 	strcat(filePath, arg);
 	// variable to hold the system command.
 	char cmd[SIZE];
+
 	char upper_arg[SIZE];
 	char ch;
 
@@ -42,8 +44,12 @@ int del (char* arg, char* filePath) {
 			upper_arg[i] = toupper(ch); 
 			i++; 
 		}
+
+		// print success message to stdout.
 		printf("\nAccronym %s deleted from the database.\n", upper_arg);
+
 	}else{ // if file does not exist.
+
 		// turn accronym to upper case letters.
 		int i = 0;
 		while (arg[i]) { 
