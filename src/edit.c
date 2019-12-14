@@ -1,12 +1,12 @@
 
-#include "../header/utilities.h"
-#include "../header/functions.h"
-
 #include <stdio.h> 
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
 #include <unistd.h>
+
+#include "../header/utilities.h"
+#include "../header/functions.h"
 
 /* The edit function searches the database for a given accronym
  * and open it in a text editor. It receives the acronym
@@ -19,11 +19,14 @@ int edit (char* acronym, char* acroPath){
 
 	char ch;
 	char cmd[SIZE];
+
 	// string variable to hold upper case acronym.
 	char upper_arg[SIZE]; 
 
-
+	// use the system enviroment editor variable
+	// to open the file for editing.
 	strcpy(cmd,"$EDITOR ");
+
 	// add the file path to the system command.
 	strcat(acroPath, acronym);
 	strcat(cmd, acroPath);
@@ -47,7 +50,9 @@ int edit (char* acronym, char* acroPath){
 		}
 		// print error to stdout.
 		printf("\nThe file %s does not esist in the database.\n", upper_arg);
+		printf("\nUse the -a option to add it.\n");
+		exit(1);
 	}
 
-	return (0);
+	return 0;
 }
