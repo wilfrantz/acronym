@@ -1,0 +1,14 @@
+
+
+LLVM :
+		Low Level Virtual Machine.
+		Collection of compilers for many languages beyond C and C++
+		such as Java, Fortran. Ex. Clang.
+
+		The LLVM Compiler Infrastructure Project uses an intermediate 
+		representation – or LLVM IR – as its abstract data structure used 
+		between its frontend and its backend. LLVM is famous for its ability 
+		to dump its IR data structure for research purposes.
+
+
+

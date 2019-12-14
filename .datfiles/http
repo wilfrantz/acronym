@@ -1,0 +1,9 @@
+
+HTTP :
+		Hypertext Transfert Protocol.
+		HTTP is the core network protocol for communication
+		on the web. The http and https schemes default to ports 80
+		and 443, respectively.
+
+
+

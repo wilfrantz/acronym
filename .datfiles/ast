@@ -1,0 +1,13 @@
+
+
+	AST :
+		Abstract Syntax Tree.
+		gcc (or any other C compiler) splits the mission into two steps,
+		first parsing the translation unit into an relocatable and 
+		C-independent data structure called an Abstract Syntax Tree (AST),
+		and then using the created AST to generate the equivalent assembly
+		instructions for the target architecture.
+
+
+
+

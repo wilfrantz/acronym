@@ -1,6 +1,6 @@
 
 whts : acronym.o add.o delete.o edit.o
-	gcc -o whts acronym.c add.c delete.c edit.c
+	gcc acronym.c add.c delete.c edit.c -o whts 
 
 acronym.o : acronym.c
 	gcc -c acronym.c

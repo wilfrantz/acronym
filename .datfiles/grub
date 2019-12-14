@@ -1,4 +1,7 @@
-GRUB :	GRand Unified Bootlloader
+GRUB :	
+		GRand Unified Bootlloader
 		GNU GRUB is a Multiboot boot loader. It was derived from
 		GRUB, the GRand Unified Bootloader, which was originally
 		designed and implemented by Erich Stefan Boleyn.
+
+
