@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Scritp to create and write the acronym
+# Script to create and write the acronym
 # to a file within the .datfiles directory.
 
 filename="$1" # filename variable.

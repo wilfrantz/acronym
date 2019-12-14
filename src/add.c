@@ -1,4 +1,5 @@
 
+
 #include "../header/functions.h"
 #include "../header/utilities.h"
 
@@ -19,12 +20,12 @@ int add (char* arg, char* path){
     // path to the acronym file.
     char* file = strcat(path, arg);
 
+    char ch;
+    char upper_arg[SIZE];
+    int i = 0;
+
     // check if the acronym file exist.
     if (access(file, F_OK) != -1){
-	char ch;
-	char upper_arg[SIZE];
-	int i = 0;
-
 	// turn accronym to upper case letters.
 	while (arg[i]) { 
 	    ch = arg[i]; 
@@ -38,16 +39,21 @@ int add (char* arg, char* path){
 	exit(3);
     }else{
 
+	// turn accronym to upper case letters.
+	while (arg[i]) { 
+	    ch = arg[i]; 
+	    upper_arg[i] = toupper(ch); 
+	    i++; 
+	}
 	// file pointer variable 
 	FILE* fp = fopen (file, "w");
+	char str[512];
 
-	char cmd [SIZE];
-	// Get program script to perform the task.
-	strcpy(cmd, "../shelDir/add.sh ");
-	strcat (cmd, arg);
+	printf("\nInsert acronym related info:\n");
+	fgets(str, sizeof(str), stdin);
 
-	// execute the system command.
-	system(cmd);
+	// write to file.
+	fprintf(fp, "\t%s :\n \t\t%s", upper_arg, str);
 
 	//close file
 	fclose(fp);
