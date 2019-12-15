@@ -1,0 +1,14 @@
+
+
+	TLS :
+ 		Transport Layer Security. 
+		Its now-deprecated predecessor, Secure Sockets Layer (SSL), are cryptographic
+		protocols designed to provide communications security over a computer network.
+
+		Several versions of the protocols find widespread use in applications such as 
+		web browsing, email, instant messaging, and voice over IP (VoIP). 
+		Websites can use TLS to secure all communications between their 
+		servers and web browsers.
+
+
+

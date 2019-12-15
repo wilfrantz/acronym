@@ -1,0 +1,13 @@
+
+
+	API :
+ 		Application programming interfaces.
+		Web APIs are application interfaces intended for use not by humans but by software agents.
+		They’re only “APIs” because the client and server have agreed, by convention, that certain 
+		URLs and verbs have specific meanings and effects within the domain of their interaction.
+
+		Excerpt From: Evi Nemeth, Garth Snyder, Trent R. Hein, Ben Whaley, Dan Mackin. 
+		“UNIX and Linux System Administration Handbook, 5E.” Apple Books.
+
+
+
