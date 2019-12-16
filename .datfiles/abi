@@ -1,0 +1,17 @@
+
+
+	ABI :
+ 		Application Binary Interface.
+		Every library or framework, regardless of the technologies or the programming 
+		language used, exposes a set of certain functionalities, which is known as
+		its Application Programming Interface (API)
+
+		While the API guarantees the compatibility of two software components to 
+		continue their functional cooperation, the ABI guarantees that two programs 
+		are compatible at the level of their machine-level instructions, together 
+		with their corresponding object files
+
+		Excerpt From: Kamran Amini. “Extreme C.” Apple Books.
+
+
+

@@ -1,0 +1,13 @@
+
+
+	MPM :
+			Multi Processing Modules.
+			For largely historical reasons, Apache has a pluggable connection handling system
+			called multi-processing modules (MPMs) that determines how HTTP connections are
+			managed at the network I/O layer
+
+			Excerpt From: Evi Nemeth, Garth Snyder, Trent R. Hein, Ben Whaley, Dan Mackin. 
+			“UNIX and Linux System Administration Handbook, 5E.” Apple Books.
+
+
+

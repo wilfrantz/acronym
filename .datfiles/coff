@@ -1,0 +1,9 @@
+
+
+	COFF :
+ 		Common Object File Format.
+		COFF is the basis for ELF, the object format that 
+		we use in most Unix-like systems.
+
+
+

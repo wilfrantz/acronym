@@ -1,0 +1,13 @@
+
+
+	HAPROXY :
+			HAProxy is the most widely used open source load-balancing software.
+			It proxies HTTP and TCP, supports sticky sessions to pin a given client 
+			to a specific web server, and offers advanced health-checking capabilities.
+			HAProxy’s configuration is usually contained in a single file, haproxy.cfg.
+
+			Excerpt From: Evi Nemeth, Garth Snyder, Trent R. Hein, Ben Whaley, Dan Mackin. 
+			“UNIX and Linux System Administration Handbook, 5E.” Apple Books.
+
+
+
