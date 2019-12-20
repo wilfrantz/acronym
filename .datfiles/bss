@@ -1,0 +1,13 @@
+
+
+	BSS :
+ 		Block Started by Symbol.
+		Historically, the name was used to denote reserved regions
+		for uninitialized words. Basically, that's the purpose that 
+		we use the BSS segment for; either uninitialized global 
+		variablesor global variables set to zero.
+
+		Excerpt From: Kamran Amini. “Extreme C.”
+
+
+
