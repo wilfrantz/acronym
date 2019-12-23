@@ -19,6 +19,7 @@
 
 
 int main (int argc, char** argv){
+
 	// local variable declaration.
 	char filePath[SIZE];
 	char cmd[SIZE];
@@ -26,17 +27,18 @@ int main (int argc, char** argv){
 	strcpy(filePath, "../.datfiles/");
 
 	/*
+
 	   current command line arguments
 	   ---------------------------------------
 	   -a add			Add  a new acronym.
 	   -e edit			Edit a acronym
 	   -r remove		remove an acronym
-	   */
+
+	*/
 
 	// process condition.
 	if (argc > 3){
-		printf("\nBad Usage.\n");
-		printf("\nUsage: %s -a [acronym], -s [acronym] or -r [acronym] \n or simply type %s for program documentation]\n",argv[0], argv[0]);
+		printf("\nBad usage.\n \nUsage: %s -a [acronym], -s [acronym] or -r [acronym] \n or type %s to read documentation]\n",argv[0], argv[0]);
 		exit(1);
 	}
 
@@ -44,7 +46,7 @@ int main (int argc, char** argv){
 	else if(argc == 1){
 		// #TODO
 		// if the program is executed without
-		// arguments print program documentation to stdout.
+		// arguments print program documentation.
 		printf("\nThis is the help section.\n");
 		exit(0); // exit program with success.
 
