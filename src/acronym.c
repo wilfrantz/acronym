@@ -8,10 +8,10 @@
  * topics.
  */
 
-#include <stdio.h> 
+#include <unistd.h>
+#include <ncurses.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 #include <ctype.h>
 
 #include "../header/functions.h"
@@ -27,7 +27,6 @@ int main (int argc, char** argv){
 	strcpy(filePath, "../.datfiles/");
 
 	/*
-
 	   current command line arguments
 	   ---------------------------------------
 	   -a add			Add  a new acronym.
@@ -47,7 +46,11 @@ int main (int argc, char** argv){
 		// #TODO
 		// if the program is executed without
 		// arguments print program documentation.
-		printf("\nThis is the help section.\n");
+		initscr();
+		printw("\nThis is the help section.\n");
+		refresh();
+		getch();
+		endwin();
 		exit(0); // exit program with success.
 
 	}else if (argc == 2){
