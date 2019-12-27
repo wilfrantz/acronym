@@ -37,7 +37,7 @@ int add (char* arg, char* path){
 	}
 	// send error message to stdout.
 	printf("\nThe acronym %s exist in the database.", upper_arg);
-	printf("\nRun the program with %s as argument\n", upper_arg);
+	printf("\nRun the program with %s as argument.\n", upper_arg);
 	printf("\nUsage: whts %s\n", upper_arg);
 	exit(3);
     }else{ // file does not exists
@@ -55,7 +55,7 @@ int add (char* arg, char* path){
 
 	// User prompt for acronym definition.
 	// stores the information in the array string.
-	printf("\nInsert acronym related info:\n");
+	printf("\nInsert acronym related info:\n> ");
 	fgets(str, sizeof(str), stdin);
 
 	// write acronym and definition to file in the .datfiles

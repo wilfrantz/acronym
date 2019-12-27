@@ -37,7 +37,7 @@ int main (int argc, char** argv){
 
 	// process condition.
 	if (argc > 3){
-		printf("\nBad usage.\n \nUsage: %s -a [acronym], -s [acronym] or -r [acronym] \n or type %s to read documentation]\n",argv[0], argv[0]);
+		printf("\nBad usage!!! \nUsage:  %s -a [acronym], -s [acronym] or -r [acronym] \n\tor type %s to read documentation]\n",argv[0], argv[0]);
 		exit(1);
 	}
 
