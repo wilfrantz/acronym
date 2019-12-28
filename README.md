@@ -1,5 +1,5 @@
 # acronym
-Simple acronym database for sysadmin and Network manager. 
+Simple acronym database for Sysadmin and Network manager. 
 
 	/*
 	   current command line arguments

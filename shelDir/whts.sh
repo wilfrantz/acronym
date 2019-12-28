@@ -3,6 +3,5 @@
 # set -x
 # set -n
 
-clear
- 
+# send acronym to stdout with less.
 less "$1"
