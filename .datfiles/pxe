@@ -1,0 +1,11 @@
+
+
+	PXE :
+ 		The Preboot Execution Environment.
+
+		PXE acts like a miniature OS that sits in a ROM on your network card.
+		Excerpt From: Evi Nemeth, Garth Snyder, Trent R. Hein, Ben Whaley, Dan Mackin. 
+		“UNIX and Linux System Administration Handbook, 5E.” Apple Books.
+
+
+

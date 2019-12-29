@@ -1,0 +1,13 @@
+
+
+	EFI :
+ 		Extensible Firmware Interface.
+
+		The EFI system partition or ESP is a partition on a data
+		storage device that is used by computers adhering to the 
+		Unified Extensible Firmware Interface. When a computer is 
+		booted, UEFI firmware loads files stored on the ESP to start
+		installed operating systems and various utilities
+
+
+
