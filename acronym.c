@@ -9,7 +9,7 @@
  */
 
 #include <unistd.h>
-#include <ncurses.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
@@ -25,6 +25,7 @@ int main (int argc, char** argv){
 	filePath = (char*)malloc(sizeof(char*));
 	char cmd[SIZE];
 
+	// Acconyms database direcoty path.
 	strcpy(filePath, "/Users/diddy/acronym/.datfiles/");
 
 	/*
@@ -33,7 +34,6 @@ int main (int argc, char** argv){
 	   -a add			Add  a new acronym.
 	   -e edit			Edit a acronym
 	   -r remove		remove an acronym
-
 	*/
 
 	// process condition.
@@ -46,14 +46,9 @@ int main (int argc, char** argv){
 	else if(argc == 1){
 		// #TODO
 		// if the program is executed without
-		// arguments print program documentation.
-		initscr();
-		printw("\nThis is the help section.\n");
-		refresh();
-		getch();
-		endwin();
+		// arguments print program documentation. (see help.c)
+		help();
 		exit(0); // exit program with success.
-
 	}else if (argc == 2){
 
 		char ch;
@@ -99,19 +94,18 @@ int main (int argc, char** argv){
 		/* check for valid flag value and take appropriate action */
 		switch (argv[i][1]) {
 
-			case 'b': system (cmd);
-					  break;
 			case 'a': add(acronym, filePath);
 					  break;
 			case 'r': del(acronym, filePath);
 					  break;
 			case 'e': edit (acronym, filePath);
 					  break;
-			default: printf("\nBad option...\nShould be \"-a\", \"-r\", \"s\" or  \"-h\"\n");
+			default: printf("\nBad option...\nShould be \"-a\", \"-r\" or \"e\"\n");
 					 exit(3);
 					 break;
 		}
 	}
 
+	free(filePath);
 	return 0;
 }
