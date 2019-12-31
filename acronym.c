@@ -21,8 +21,8 @@
 int main (int argc, char** argv){
 
 	// local variable declaration.
-	char *filePath;
-	filePath = (char*)malloc(sizeof(char*));
+	char filePath[SIZE];
+	//filePath = (char*)malloc(sizeof(char*));
 	char cmd[SIZE];
 
 	// Acconyms database direcoty path.
@@ -106,6 +106,5 @@ int main (int argc, char** argv){
 		}
 	}
 
-	free(filePath);
 	return 0;
 }
