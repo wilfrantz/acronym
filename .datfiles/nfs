@@ -3,5 +3,10 @@
 	NFS :
  		Network File System.
 
+		The Network File System protocol, commonly known as NFS, lets you share 
+		filesystems among computers.
+		The goal of a network file service is to grant shared access to files and 
+		directories that are stored on the disks of remote systems.
+
 
 

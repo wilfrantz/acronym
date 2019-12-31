@@ -1,0 +1,12 @@
+
+
+	SAN :
+ 		Storage Area Network.
+
+		SAN servers need not understand filesystems because they serve only 
+		disk blocks, unlike NFS and SMB, which operate at the level of filesystems and 
+		files rather than raw storage devices.
+
+
+
+
