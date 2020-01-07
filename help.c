@@ -17,7 +17,7 @@ int help(void){
 	FILE *fp;
 	int y, x;
 
-	// Openng the file.
+	// Opening the file.
 	fp = fopen("/Users/diddy/acronym/.datfiles/help","r");
 
 	// Process condition.
