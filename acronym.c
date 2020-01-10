@@ -1,7 +1,7 @@
 
 
 /* 
- * C program to store, edit and display acronyms.
+ * C program to save, edit and display acronyms.
  * I have written this progrom to help me keep up
  * with the multiples acronyms that I have to deal 
  * with in the IT field, specially with system and networking
@@ -34,7 +34,7 @@ int main (int argc, char** argv){
 	   -a add			Add  a new acronym.
 	   -e edit			Edit a acronym
 	   -r remove		remove an acronym
-	*/
+	   */
 
 	// process condition.
 	if (argc > 3){
