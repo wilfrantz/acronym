@@ -1,7 +1,7 @@
 
 
 LLVM :
-		Low Level Virtual Machine.
+		LLVM is an acronym that stands for Low Level Virtual Machine.
 		Collection of compilers for many languages beyond C and C++
 		such as Java, Fortran. Ex. Clang.
 
