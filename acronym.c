@@ -1,12 +1,11 @@
 
-
 /* 
  * C program to save, edit and display acronyms.
  * I have written this progrom to help me keep up
  * with the multiples acronyms that I have to deal 
  * with in the IT field, specially with system and networking
  * topics.
- */
+ * */
 
 #include <unistd.h>
 #include <stdio.h>
@@ -25,7 +24,7 @@ int main (int argc, char** argv){
 	//filePath = (char*)malloc(sizeof(char*));
 	char cmd[SIZE];
 
-	// Acconyms database direcoty path.
+	// Acconyms database directory path.
 	strcpy(filePath, "/Users/diddy/acronym/.datfiles/");
 
 	/*
@@ -70,6 +69,7 @@ int main (int argc, char** argv){
 			printf("\nThe acronym %s is not in your database.\n", upper_acro);
 			exit(1);
 		}
+
 		/* find  and display the acronym file from the
 		 * program database (.datfiles direcoty) */
 		strcpy(cmd, "less ");

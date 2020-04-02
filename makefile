@@ -1,6 +1,6 @@
 
-whts : acronym.o add.o delete.o edit.o
-	gcc -g3 -lncurses -Wall -Wextra acronym.c add.c delete.c edit.c -o whts 
+whts : acronym.o add.o delete.o edit.o help.o
+	gcc -g3 -lncurses -Wall -Wextra acronym.c help.c add.c delete.c edit.c -o whts 
 
 acronym.o : acronym.c
 	gcc -g -c acronym.c
@@ -14,6 +14,8 @@ delete.o : delete.c
 edit.o : edit.c
 	gcc -g -c edit.c
 
+help.o : help.c
+	gcc -g -c help.c
 
 clean :
 	rm *.o
