@@ -47,11 +47,25 @@ int main (int argc, char** argv){
 		// if the program is executed without
 		// arguments print program documentation. (see help.c)
 		//		help();
-		printf("\nwhts v0.0.1\nCopyright 2019-2020 Wilfrantz DEDE.\n\n%s is free software, covered by the GNU General Public License, and you are\nwelcome to change it and/or distribute copies of it under certain conditions.\nThere is absolutely no warranty for %s.\n", argv[0], argv[0]);
+		printf("\nAcronym v0.0.1\nCopyright 2019-2020 Wilfrantz DEDE.\n\n%s is free software, covered by the GNU General Public License, and you are\nwelcome to change it and/or distribute copies of it under certain conditions.\nThere is absolutely no warranty for %s.\n", argv[0], argv[0]);
 		printf("\nCurrent command line arguments\n---------------------------------------\n-a add			Add  a new acronym.\n-e edit			Edit a acronym\n-r remove		remove an acronym\n");
 		exit(0); // exit program with success.
 	}else if (argc == 2){
 
+		/* #TODO
+		if (argv[1]){
+
+			switch (argv[1]){
+				case 'v': printf("\n%s v0.0.1", argv[0]);
+						  break;
+
+				default: printf("\nMissing arguments");
+						 printf("\nBad usage!!! \nUsage:  %s -a [acronym], -s [acronym] or -r [acronym] \n\tor type %s to read documentation]\n",argv[0], argv[0]);
+						 exit(-2);
+
+			}
+		}
+		*/
 		char ch;
 		char upper_acro[SIZE];
 		char acronym[SIZE];
@@ -66,7 +80,7 @@ int main (int argc, char** argv){
 		}
 		strcat(filePath, argv[1]);
 
-		// check is the file acronym file exist.
+		// Check if the file acronym file exist.
 		if (access(filePath, F_OK) != 0){
 			printf("\nThe acronym %s is not in your database.\n", upper_acro);
 			exit(1);
@@ -87,7 +101,7 @@ int main (int argc, char** argv){
 	strcpy(acronym, argv[2]);
 
 	for (int i = 1; i < argc; i+=2) {
-		/* check for valid flags (first char should be '-' for flags) */
+		// Check for valid flags (first char should be '-' for flags
 		if (argv[i][0] != '-') {
 			printf("\nbad option character...should be \"-\"\n");
 			exit(2);
@@ -95,7 +109,6 @@ int main (int argc, char** argv){
 
 		/* check for valid flag value and take appropriate action */
 		switch (argv[i][1]) {
-
 			case 'a': add(acronym, filePath);
 					  break;
 			case 'r': del(acronym, filePath);
