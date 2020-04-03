@@ -28,7 +28,7 @@ int main (int argc, char** argv){
 	strcpy(filePath, "/Users/diddy/acronym/.datfiles/");
 
 	/*
-	   current command line arguments
+	   Current command line arguments
 	   ---------------------------------------
 	   -a add			Add  a new acronym.
 	   -e edit			Edit a acronym
@@ -46,7 +46,9 @@ int main (int argc, char** argv){
 		// #TODO
 		// if the program is executed without
 		// arguments print program documentation. (see help.c)
-		help();
+		//		help();
+		printf("\nwhts v0.0.1\nCopyright 2019-2020 Wilfrantz DEDE.\n\n%s is free software, covered by the GNU General Public License, and you are\nwelcome to change it and/or distribute copies of it under certain conditions.\nThere is absolutely no warranty for %s.\n", argv[0], argv[0]);
+		printf("\nCurrent command line arguments\n---------------------------------------\n-a add			Add  a new acronym.\n-e edit			Edit a acronym\n-r remove		remove an acronym\n");
 		exit(0); // exit program with success.
 	}else if (argc == 2){
 
