@@ -15,7 +15,7 @@
 int search (char* acro, char* filePath){
 	// Acronym to upper case.
 	const char* upper_acro = to_upper(acro);
-	// path to the file
+	// Path to the acronym file
 	strcat(filePath, acro);
 
 	// Check if the acronym file exist.
@@ -23,16 +23,17 @@ int search (char* acro, char* filePath){
 	if(!fp)	{
 		perror(upper_acro);
 		exit(EXIT_FAILURE);
+	} else {
+		char* cmd = (char*) malloc(sizeof(char) * SIZE);
+		strcpy(cmd, "less ");
+		strcat(cmd, filePath);
+
+		// execute system command.
+		system(cmd);
+
+		free(cmd);
 	}
 
-	char* cmd = (char*) malloc(sizeof(char) * SIZE);
-	strcpy(cmd, "less ");
-	strcat(cmd, filePath);
 
-	// execute system command.
-	system(cmd);
-
-	free(cmd);
-
-	exit (0);
+	return 0;
 }
