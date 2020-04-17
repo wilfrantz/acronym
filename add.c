@@ -29,7 +29,7 @@ int add (char* arg, char* path){
 		perror(upper_arg);
 		exit(EXIT_FAILURE);
 	} else { // create and write to the file
-		char* buffer = (char*) malloc(sizeof(char*) * SIZE);
+		char* buffer = (char*) malloc(sizeof(char) * SIZE);
 		// User prompt for acronym definition.
 		printf("\nInsert definition for %s : \n> ", upper_arg);
 		fgets(buffer, sizeof(buffer), stdin);
