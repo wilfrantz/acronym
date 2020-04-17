@@ -13,16 +13,14 @@ int help(void){
 	int ch, prev, row, col;
 	prev = EOF;
 
-	// file pointer.
-	FILE *fp;
 	int y, x;
+	// file pointer.
 
 	// Opening the file.
-	fp = fopen("/Users/diddy/acronym/.datfiles/help","r");
+	FILE* fp = fopen("/Users/diddy/acronym/.datfiles/help","r");
 
 	// Process condition.
-	if(fp == NULL)
-	{
+	if(!fp){
 		perror("Cannot open help section file");
 		exit(1);
 	}
