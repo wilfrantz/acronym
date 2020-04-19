@@ -30,11 +30,10 @@ int add (char* arg, char* path){
 		int bytes_read;
 		size_t size = SIZE; 
 		char* buffer = (char*) malloc(sizeof(char) * size);
-
 		// User prompt for acronym definition.
 		printf("\nInsert definition for %s : \n> ", upper_arg);
 		bytes_read = getline(&buffer, &size, stdin);
-		if (bytes_read == -1){
+		if (bytes_read == -1){ // input error checking.
 			perror("ERROR!");
 			exit(EXIT_FAILURE);
 		}
