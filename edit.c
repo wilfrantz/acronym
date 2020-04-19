@@ -35,15 +35,11 @@ int edit (char* acronym, char* acroPath){
 	// check if the file exists and if the program
 	// has write permission.
 	if (access(acroPath, F_OK) == 0){
-
 		// Execute the system command.
 		system(cmd);
-
 	}else{ // if program does not have write permission.
-
 		// turn accronym to upper case letters.
 		upper_arg = to_upper(acronym);
-
 		// print error to stdout.
 		printf("\nThe file %s does not exist in the database.", upper_arg);
 		printf("\nUse the -a option to add it.\n");

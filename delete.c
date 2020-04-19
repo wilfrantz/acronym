@@ -40,7 +40,7 @@ int del (char* arg, char* filePath) {
 		upper_arg = to_upper(arg);
 
 		// print success message to stdout.
-		printf("\nAccronym %s deleted from the database.\n", upper_arg);
+		printf("\nAcronym %s deleted from the database.\n", upper_arg);
 
 	}else{ // if file does not exist.
 
