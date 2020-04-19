@@ -23,14 +23,12 @@ int add (char* arg, char* path){
 	// create the acronym file
 	FILE* fp = fopen(filePath, "w+x");
 
-	// check if file exists
-	if (!fp){
-		// send error message to stdout.
+	if (!fp){ // check if file exists
 		perror(upper_arg);
 		exit(EXIT_FAILURE);
 	} else { 
 		int bytes_read;
-		size_t size = 256;
+		size_t size = SIZE; 
 		char* buffer = (char*) malloc(sizeof(char) * size);
 
 		// User prompt for acronym definition.
