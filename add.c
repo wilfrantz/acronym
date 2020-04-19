@@ -28,11 +28,18 @@ int add (char* arg, char* path){
 		// send error message to stdout.
 		perror(upper_arg);
 		exit(EXIT_FAILURE);
-	} else { // create and write to the file
-		char* buffer = (char*) malloc(sizeof(char) * SIZE);
+	} else { 
+		int bytes_read;
+		size_t size = 256;
+		char* buffer = (char*) malloc(sizeof(char) * size);
+
 		// User prompt for acronym definition.
 		printf("\nInsert definition for %s : \n> ", upper_arg);
-		fgets(buffer, sizeof(buffer), stdin);
+		bytes_read = getline(&buffer, &size, stdin);
+		if (bytes_read == -1){
+			perror("ERROR!");
+			exit(EXIT_FAILURE);
+		}
 		// write to acronynm file
 		fprintf(fp, "\n\n\t%s :\n \t\t%s\n\n\n", upper_arg, buffer);
 
