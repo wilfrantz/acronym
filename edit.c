@@ -43,7 +43,8 @@ int edit (char* acronym, char* acroPath){
 		// print error to stdout.
 		printf("\nThe file %s does not exist in the database.", upper_arg);
 		printf("\nUse the -a option to add it.\n");
-		exit(1);
+		return (-1);
+		// exit(1);
 	}
 
 	free(upper_arg);
