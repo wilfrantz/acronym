@@ -11,5 +11,6 @@ int help ();
 char* to_upper(char*);
 int search (char*, char*);
 int data_validation(int, const int);
+// void msg();
 
 #endif
