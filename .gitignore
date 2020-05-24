@@ -1,0 +1,9 @@
+.gdbinit
+*.o
+wht
+whts
+shelDir
+header
+wht.dSYM
+whts.dSYM
+msg.c
