@@ -1,0 +1,11 @@
+
+
+	SAP :
+ 		Service Access Points. Each frame includes 2 SAP addresses:
+		DSAP 
+			- Destination Service Access Point 
+		SSAP 
+			- Source Service Access Point
+
+
+
