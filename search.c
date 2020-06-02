@@ -22,7 +22,8 @@ int search (char* acro, char* filePath){
 	FILE* fp = fopen(filePath, "r+x");
 	if(!fp)	{
 		perror(upper_acro);
-		exit(EXIT_FAILURE);
+		return -1;
+		// exit(EXIT_FAILURE);
 	} else {
 		char* cmd = (char*) malloc(sizeof(char) * SIZE);
 		strcpy(cmd, "less ");

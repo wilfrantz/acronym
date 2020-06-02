@@ -24,18 +24,14 @@
 
 
 int main (int argc, char** argv){
-
 	// database directory path.
 	char pathDir[] = "/Users/diddy/Code/Cprog/acronym/.datfiles/";
 
 	char* acronym = (char*) malloc(sizeof(char) * SIZE);
 
-	// if CLA > 3, exit with error.
-	if (argc > 3){
-
+	if (argc > 3){ 	// if CLA > 3, exit with error.
 		printf("\nToo many arguments !!! \nUsage:  %s -a [acronym], -e [acronym] or -r [acronym] \n", argv[0]);
 		exit(EXIT_FAILURE);
-
 	}else if(argc == 1){
 		menu(argv[0], pathDir); // menu fuction call.
 		exit(0); 

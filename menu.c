@@ -13,41 +13,17 @@
 
 int menu (char* argv, char* pathname){
 
-	printf("\nWelcome to the Acronym Database.\n");
-
-	printf("\n%s \nCopyright 2019-2020 Wilfrantz DEDE.\n\n%s is free software, covered by the GNU General Public License, and you are\nwelcome to change it and/or distribute copies of it under certain conditions.\nThere is absolutely no warranty for %s.\n", VERSION, argv, argv);
-
-	printf("\n\t\t\tCurrent command line arguments\n\
-			---------------------------------->\n\
-			-a add			Add a new acronym.\n\
-			-e edit			Edit a acronym\n\
-			-r remove		remove an acronym\n");
-
-	/*
-	// Loading animation 
-	for ( int loop = 0; loop < 3; ++loop) {
-	for ( int each = 0; each < 3; ++each) {
-	printf ("\rLoading %.*s   \b\b\b", each, "...");
-	fflush (stdout);// Force printing as no newline in output
-	sleep (1);
-	}
-	}
-	*/
-	printf ( "\n");
+	//msg(); // display program info.
 
 	int choice;
-
-	//////////////////////
-	// Print main menu //
-
 	do {
 		printf("\nMenu:\n");
 		printf("\n\
-				1- Add a new acronym\n\
-				2- Edit an acronym\n\
-				3- Remove an acronym\n\
-				4- Search for an acronym.\n\
-				5- Quit the program\n\n\
+				[1] Add a new acronym\n\
+				[2] Edit an acronym\n\
+				[3] Remove an acronym\n\
+				[4] Search for an acronym.\n\
+				[5] Quit the program\n\n\
 				> ");
 		bool to_validate = scanf("%d", &choice);
 		choice = data_validation(to_validate, choice);
