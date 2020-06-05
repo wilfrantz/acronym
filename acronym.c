@@ -1,4 +1,3 @@
-
 /* 
  * acronym.c :
  * C program to save, edit and display acronyms.
