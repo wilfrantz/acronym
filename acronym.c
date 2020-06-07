@@ -1,11 +1,10 @@
-/* 
+/*
  * acronym.c :
  * C program to save, edit and display acronyms.
  * I have written this progrom to help me keep up
- * with the multiples acronyms that I have to deal 
+ * with the multiples acronyms that I have to deal
  * with in the IT field, specially with system and networking
  * topics.
- *
  *
  * Current command line arguments
  * ---------------------------------------
@@ -33,10 +32,10 @@ int main (int argc, char** argv){
 		exit(EXIT_FAILURE);
 	}else if(argc == 1){
 		menu(argv[0], pathDir); // menu fuction call.
-		exit(0); 
+		exit(0);
 	}else if (argc == 2){
 		strcpy(acronym, argv[1]);
-		search (acronym, pathDir); 
+		search (acronym, pathDir);
 		exit(0);
 	}else{
 		strcpy(acronym, argv[2]);
