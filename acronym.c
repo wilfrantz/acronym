@@ -23,7 +23,7 @@
 
 int main (int argc, char** argv){
 	// database directory path.
-	char pathDir[] = "/Users/diddy/Code/Cprog/acronym/.datfiles/";
+	char pathDir[] = "/Users/Dede/Code/Cprog/acronym/.datfiles/";
 
 	char* acronym = (char*) malloc(sizeof(char) * SIZE);
 
