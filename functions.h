@@ -1,5 +1,4 @@
 
-// header guard statements to prevent double inclusion
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
