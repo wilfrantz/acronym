@@ -53,14 +53,22 @@ int main (int argc, char** argv){
 			// Take appropriate action.
 			switch (argv[i][1]) {
 				case 'a': add(acronym, pathDir);
-					  break;
+						  break;
 				case 'r': del(acronym, pathDir);
-					  break;
+						  break;
 				case 'e': edit(acronym, pathDir);
-					  break;
-				default: printf("\nBad option...\nShould be \"-a\", \"-r\" or \"e\"\n");
-					 exit(3);
-					 break;
+						  break;
+				case 'h':
+						  printf("ncdu <options> <directory>\n\n");
+						  printf("  -h, This help message\n");
+						  printf("  -a                         Add an acronym.\n");
+						  printf("  -r                         Remove an acronym.\n");
+						  printf("  -e                         Edit an acronym.\n");
+						  printf("  -v						   Print version\n");
+						  exit(0);
+				default: printf("\nBad option...\nShould be \"-a\", \"-r\", \"e\" or \"h\"\n");
+						 exit(3);
+						 break;
 			}
 		}
 	}
