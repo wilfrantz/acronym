@@ -23,8 +23,9 @@
 
 
 int main (int argc, char** argv){
+	// NOTE: Improve this line and improve protability 
 	// database directory path.
-	char pathDir[] = "/home/dede/Code/Github/acronym/.datfiles/";
+	char pathDir[] = ".datfiles/";
 
 	char* acronym = (char*) malloc(sizeof(char) * SIZE);
 
