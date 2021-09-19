@@ -1,6 +1,6 @@
 
-whts : acronym.o add.o delete.o edit.o help.o menu.o data_validation.o search.o to_upper.o msg.o
-	gcc -g3 -lncurses -Wall -Wextra acronym.c help.c add.c delete.c search.c edit.c menu.c msg.c to_upper.c data_validation.c -o wht
+whts : acronym.o add.o delete.o edit.o help.o menu.o data_validation.o search.o to_upper.o #msg.o
+	gcc -g3 -lncurses -Wall -Wextra acronym.c help.c add.c delete.c search.c edit.c menu.c to_upper.c data_validation.c -o whts
 
 acronym.o : acronym.c
 	gcc -g -c acronym.c
@@ -30,7 +30,7 @@ data_validation.o : data_validation.c
 	gcc -g -c data_validation.c
 
 #msg.o : msg.c
-#	gcc -g -c msg.c
+#gcc -g -c msg.c
 
 clean :
 	rm *.o
